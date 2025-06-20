@@ -1,4 +1,3 @@
-import React from 'react'
 
 import courses from '../data/courses.json'
 import CourseCard from '../components/CourseCard'
