@@ -16,7 +16,7 @@ const HomePage = () => {
               style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}>
               ACADEMIA INTERNACIONAL PERIODISMO - COMUNICACIÓN GLOBAL
             </h2>
-            <Link href="/courses" className=" px-6 py-3 bg-slate-500 text-white rounded-xl hover:bg-slate-600 transition">
+            <Link href="/courses" className=" px-6 py-3 bg-slate-950 text-white font-bold leading-relaxed tracking-widest rounded-xl hover:bg-slate-950 transition uppercase ">
               Ver cursos
             </Link>
           </div>

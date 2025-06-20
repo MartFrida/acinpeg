@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 function App() {
 
   return (
-    <div className='flex flex-col h-[100vh]'>
+    <div className='flex flex-col justify-between h-[100vh]'>
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />

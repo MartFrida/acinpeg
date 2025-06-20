@@ -1,16 +1,138 @@
 [
   {
-    "id": "journalism-basics",
-    "title": "Основы журналистики",
-    "description": "Научитесь писать новости, статьи и репортажи",
-    "teacher": "Иван Иванов",
-    "level": "beginner"
+    "id": "investigacion",
+    "title": "Periodismo de Investigación",
+    "description": "Este curso está diseñado para formar periodistas capaces de investigar a fondo, descubrir verdades ocultas y exponer hechos de interés público con rigor, ética y responsabilidad. A través de una combinación de teoría, análisis de casos reales y prácticas profesionales, los participantes aprenderán a desarrollar investigaciones periodísticas sólidas, desde la elección del tema hasta la publicación del reportaje.",
+    "contenido": {
+      "title": "Contenido Destacado",
+      "description": [
+        "Técnicas de investigación periodística",
+        "Uso de fuentes confiables y verificación de datos",
+        "Acceso a información pública y manejo de leyes de transparencia",
+        "Escritura narrativa para reportajes de largo aliento",
+        "Seguridad digital y protección de fuentes",
+        "Ética en el periodismo de investigación"
+      ]
+    },
+    "dirigido": {
+      "title": "Dirigido a",
+      "description": "Estudiantes de comunicación, periodistas en formación, profesionales del periodismo y comunicadores interesados en profundizar en el área investigativa."
+    },
+    "modalidad": {
+      "title": "Modalidad",
+      "description": "Presencial / Online (según disponibilidad)"
+    },
+    "duracion": {
+      "title": "Duración",
+      "description": "3 meses"
+    },
+    "teacher": "Amaruk Kaishapanta",
+    "level": "beginner",
+    "certificacion": {
+      "title": "Certificación",
+      "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
+    }
   },
   {
-    "id": "media-teksty",
-    "title": "Создание медиатекстов",
-    "description": "Научитесь писать тексты для СМИ, блогов и социальных сетей.",
-    "teacher": "Иван Иванов",
-    "level": "beginner"
+    "id": "digital",
+    "title": "Periodismo Digital",
+    "description": "Este curso ofrece una formación integral en el entorno digital del periodismo contemporáneo. Está orientado a desarrollar habilidades para producir, editar y difundir contenidos informativos en múltiples plataformas digitales, adaptándose a los nuevos formatos, audiencias y tecnologías. Los participantes aprenderán a utilizar herramientas digitales, optimizar contenidos para la web y redes sociales, y aplicar criterios de calidad y veracidad en entornos digitales.",
+    "contenido": {
+      "title": "Contenido Destacado",
+      "description": [
+        "Redacción y edición para medios digitales",
+        "Uso de redes sociales como herramientas periodísticas",
+        "SEO y posicionamiento de noticias en buscadores",
+        "Producción de contenidos multimedia (video, audio, infografías)",
+        "Herramientas digitales para verificación y análisis de datos",
+        "Tendencias en periodismo móvil y narrativas interactivas"
+      ]
+    },
+    "dirigido": {
+      "title": "Dirigido a",
+      "description": "Estudiantes de comunicación, periodistas en ejercicio, creadores de contenido y profesionales interesados en el ecosistema digital informativo."
+    },
+    "modalidad": {
+      "title": "Modalidad",
+      "description": "Presencial / Online (según disponibilidad)"
+    },
+    "duracion": {
+      "title": "Duración",
+      "description": "2 meses"
+    },
+    "teacher": "Amaruk Kaishapanta",
+    "level": "beginner",
+    "certificacion": {
+      "title": "Certificación",
+      "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
+    }
+  },
+  {
+    "id": "corresponsalia",
+    "title": "Periodismo de Corresponsalía",
+    "description": "Este curso está enfocado en la formación de periodistas corresponsales capaces de informar desde el terreno con precisión, contexto y profundidad. Se abordan las habilidades necesarias para cubrir noticias internacionales, conflictos, crisis humanitarias y acontecimientos relevantes desde distintos lugares del mundo, adaptándose a realidades culturales, políticas y sociales diversas. El curso enfatiza la preparación práctica, la seguridad en zonas de riesgo y la ética profesional.",
+    "contenido": {
+      "title": "Contenido Destacado",
+      "description": [
+        "Funciones y responsabilidades del corresponsal",
+        "Cobertura en terreno: preparación, logística y narración",
+        "Contextualización de hechos internacionales",
+        "Relaciones con medios y agencias de noticias",
+        "Seguridad personal y trabajo en zonas de conflicto",
+        "Ética y responsabilidad del corresponsal ante la audiencia global"
+      ]
+    },
+    "dirigido": {
+      "title": "Dirigido a",
+      "description": "Periodistas en formación o en ejercicio, estudiantes de comunicación y profesionales interesados en la cobertura internacional y el trabajo como corresponsales."
+    },
+    "modalidad": {
+      "title": "Modalidad",
+      "description": "Presencial / Online (según disponibilidad)"
+    },
+    "duracion": {
+      "title": "Duración",
+      "description": "3 meses"
+    },
+    "teacher": "Amaruk Kaishapanta",
+    "level": "beginner",
+    "certificacion": {
+      "title": "Certificación",
+      "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
+    }
+  },
+  {
+    "id": "prensa",
+    "title": "Periodismo en Radio, Televisión y Prensa Escrita",
+    "description": "Este curso ofrece una formación completa en los principales formatos del periodismo tradicional: radio, televisión y prensa escrita. Los participantes aprenderán a producir contenidos informativos de calidad adaptados a cada medio, dominando las técnicas de redacción, locución, presentación, y producción audiovisual. Se enfatiza el rigor informativo, el estilo profesional y la capacidad de adaptación del periodista a distintos canales de comunicación.",
+    "contenido": {
+      "title": "Contenido Destacado",
+      "description": [
+        "Principios y géneros del periodismo en medios tradicionales",
+        "Técnicas de redacción periodística para prensa escrita",
+        "Locución y guion para radio informativa",
+        "Producción y presentación de noticias para televisión",
+        "Uso del lenguaje verbal, visual y sonoro",
+        "Organización de redacciones y flujos de trabajo en medios"
+      ]
+    },
+    "dirigido": {
+      "title": "Dirigido a",
+      "description": "EEstudiantes de comunicación, periodistas en ejercicio, y personas interesadas en adquirir o perfeccionar competencias en medios tradicionales."
+    },
+    "modalidad": {
+      "title": "Modalidad",
+      "description": "Presencial / Online (según disponibilidad)"
+    },
+    "duracion": {
+      "title": "Duración",
+      "description": "3 meses"
+    },
+    "teacher": "Amaruk Kaishapanta",
+    "level": "beginner",
+    "certificacion": {
+      "title": "Certificación",
+      "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
+    }
   }
 ]
