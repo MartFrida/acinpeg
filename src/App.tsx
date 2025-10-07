@@ -5,16 +5,18 @@ import Contacts from './pages/Contacts';
 import AboutPage from './pages/AboutPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CoursePage from './pages/CoursePage';
 
 function App() {
 
   return (
-    <div className='flex flex-col justify-between h-[100vh]'>
+    <div className='flex flex-col justify-between min-h-screen'>
       <Header />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/courses' element={<CoursesPage />} />
+        <Route path="/courses/:id" element={<CoursePage />} />
         <Route path='/contacts' element={<Contacts />} />
       </Routes>
       <Footer />
