@@ -4,7 +4,7 @@ const AboutPage = () => {
   return (
      <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 text-center">
+      <section className="bg-gradient-to-r from-slate-950 to-slate-700 text-white py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ const AboutPage = () => {
           Academia Internacional de Periodismo – Comunicación Global
         </motion.h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto">
-          Formando profesionales del periodismo para un mundo global e interconectado.
+          Formando profesionales del periodismo para un mundo global e interconectado
         </p>
       </section>
 
@@ -26,7 +26,7 @@ const AboutPage = () => {
           transition={{ duration: 0.8 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl font-semibold text-blue-800 mb-6">Nuestra Misión</h2>
+          <h2 className="text-3xl font-semibold text-blue-900 mb-6">Nuestra Misión</h2>
           <p className="text-lg leading-relaxed text-gray-700">
             Nuestra misión es ofrecer una formación periodística de excelencia,
             combinando la ética profesional, la investigación rigurosa y las nuevas
@@ -39,7 +39,7 @@ const AboutPage = () => {
 
       {/* Diploma Ceremony Photos */}
       <section className="py-16 bg-gray-50 px-6 md:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800 mb-10">
+        <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
           Primera Ceremonia de Entrega de Diplomas
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -63,7 +63,7 @@ const AboutPage = () => {
 
       {/* Honored Guests */}
       <section className="py-16 px-6 md:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-800 mb-10">
+        <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
           Invitados de Honor
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">

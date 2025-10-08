@@ -5,7 +5,7 @@ export default function Contacts() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20 text-center">
+      <section className="bg-gradient-to-r from-slate-950 to-slate-700 text-white py-20 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function Contacts() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="bg-blue-700 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition mt-4"
+              className="bg-blue-900 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition mt-4"
             >
               Enviar Mensaje
             </motion.button>
