@@ -58,7 +58,7 @@ export default function Contacts() {
               <input
                 type="text"
                 placeholder="Tu nombre completo"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-700 outline-none"
               />
             </div>
 
@@ -67,7 +67,7 @@ export default function Contacts() {
               <input
                 type="email"
                 placeholder="tuemail@example.com"
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-700 outline-none"
               />
             </div>
 
@@ -76,7 +76,7 @@ export default function Contacts() {
               <textarea
                 rows={5}
                 placeholder="Escribe tu mensaje aquí..."
-                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-600 outline-none"
+                className="w-full border border-gray-300 rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-700 outline-none"
               ></textarea>
             </div>
 
