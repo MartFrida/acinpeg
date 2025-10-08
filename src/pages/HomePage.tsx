@@ -10,11 +10,11 @@ const HomePage = () => {
           <div className='bg-slate-900/60 p-4 md:p-8 rounded-lg'>
             <h1 className=" tracking-widest text-5xl md:text-7xl font-bold leading-relaxed text-center text-white"
               style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}>
-              ACINPEG
+              ACINPECG
             </h1>
             <h2 className="text-2xl mb-4 md:text-3xl font-bold leading-relaxed tracking-wide text-center text-white"
               style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}>
-              ACADEMIA INTERNACIONAL PERIODISMO - COMUNICACIÓN GLOBAL
+              ACADEMIA INTERNACIONAL DE PERIODISMO Y COMUNICACIÓN GLOBAL
             </h2>
             <Link href="/courses" className=" px-6 py-3 bg-slate-950 text-white font-bold leading-relaxed tracking-widest rounded-xl hover:bg-slate-950 transition uppercase ">
               Ver cursos
