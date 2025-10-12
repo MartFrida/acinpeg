@@ -7,7 +7,7 @@ type Course = {
   title: string
   description: string
 }
-const CoursesPage = () => {
+const CoursosPage = () => {
   return (
     <div className="p-6  mx-auto text-center">
       <h2 className="text-3xl font-semibold text-blue-900 mb-6">Cursos disponibles</h2>
@@ -20,4 +20,4 @@ const CoursesPage = () => {
   )
 }
 
-export default CoursesPage
+export default CoursosPage
