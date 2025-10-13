@@ -215,7 +215,7 @@ const AboutPage = () => {
                 <h3 className="text-xl font-semibold text-blue-900">
                   {guest.name}
                 </h3>
-                <p className="text-gray-600 mt-2">{guest.role}</p>
+                
               </div>
             </motion.div>
           ))}

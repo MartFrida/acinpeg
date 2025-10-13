@@ -1,42 +1,32 @@
 [
     {
-      "name": "Dr. Paco Miño (Ecuador)",
+      "name": "Cónsul General de República Dominicana Sr.Antonio José Gómez Peña",
       "role": "Médico cirujano oriundo del Ecuador, escritor, poeta, comunicador y un gestor cultural latinoamericano.",
-      "img": "/images/colaboradores/DrPacoMiño.jpg"
+      "img": "/images/logo2_bg.jpg"
     },
     {
-      "name": "Lic. Patricia Sosa (Ecuador)",
+      "name": "la Vice Cónsul del Ecuador Sra. María José Vidal",
       "role": "Master en periodismo, ex Cónsul General de Ecuador en España, activista indigenista y defensora de los derechos humanos.",
-      "img": "/images/colaboradores/LicPatriciaSosa.jpeg"
+         "img": "/images/logo2_bg.jpg"
     },
     {
-      "name": "Dra. Cristina Russo ( Ingleterra)",
+      "name": "Diputado por el parlamento Catalán Sr  Ernesto Carrión",
       "role": "Directora general del periódico digital 'Humus 4 Change' en Londres desde hace 20 años es experta en Marketing digital y IA, abogada y psicóloga una poliglota dedicada a la defensa de los derechos humanos internacionales.",
-      "img": "/images/colaboradores/DraCristinaRusso.jpg"
+         "img": "/images/logo2_bg.jpg"
     },
     {
-      "name": "Lic. Guillermo Cervera ( España)",
+      "name": "Ex Cónsul de la República Plurinacional de Bolivia Sra. Maya Nemtala",
       "role": "Un periodista y correspondal de guerra de fama mundial ha publicado en New York Time, The Rolling Stones, Miami Herald, Nacional Geography, CNN, ABC, El país, La Vanguardia, TVE1, etc. Español con 40 años en funciones y fotoperiodista.",
-      "img": "/images/colaboradores/LicGuillermoCervera.jpeg"
+         "img": "/images/logo2_bg.jpg"
     },
     {
-      "name": "Prof. Jorge Rivera ( Colombia)",
+      "name": "el Cónsul General de la República de Chile Sr. Jaime  Ferraz",
       "role": "Un periodista con más de 30 años de profesión director del programa el Café mañanero por redes sociales.",
-      "img": "/images/colaboradores/ProfJorgeRivera.jpg"
+         "img": "/images/logo2_bg.jpg"
     },
     {
-      "name": "Sr. Cristhian Esquivel ( Perú)",
+      "name": "maestra de ceremonia la Prof. Lucía Aymara Huallpa Lopéz",
       "role": "Un Actor, comunicador ,productor audiovisual y Comunicador de amplia experiencia",
-      "img": "/images/colaboradores/SrCristhianEsquivel.jpg"
-    },
-    {
-      "name": "Prof. Carlos Santos ( Argentina)",
-      "role": "Un director, productor y Comunicador audiovisual argentino de fama y reconocimiento internacional.",
-      "img": "/images/colaboradores/ProfCarlosSantos.jpg"
-    },
-    {
-      "name": "Lic. Istar Montul ( España)",
-      "role": "Una bióloga marina experta en antropología humana y periodista especialista en la cultura árabe es originaria de España y reside en Marruecos y Barcelona",
-      "img": "/images/colaboradores/LicIstarMontul.png"
+         "img": "/images/logo2_bg.jpg"
     }
   ]
