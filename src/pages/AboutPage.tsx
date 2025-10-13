@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import courses from '../data/profesorado_colaboradores.json'
+import logos from '../data/partnners_logos.json'
 
 interface Guest {
   name: string;
@@ -300,29 +301,36 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* NUESTROS PARTNERS */}
-      <section className="py-16 bg-gray-50 px-6 md:px-20">
-        <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
-          NUESTROS PARTNERS + LOGOS
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <img
-            src="/images/diploma1.jpg"
-            alt="Entrega de diplomas 1"
-            className="rounded-2xl shadow-lg object-cover w-full h-64"
-          />
-          <img
-            src="/images/diploma2.jpg"
-            alt="Entrega de diplomas 2"
-            className="rounded-2xl shadow-lg object-cover w-full h-64"
-          />
-          <img
-            src="/images/diploma5.jpg"
-            alt="Entrega de diplomas 3"
-            className="rounded-2xl shadow-lg object-cover w-full h-64"
-          />
-        </div>
-      </section>
+      {/* NUESTROS PARTNERS LOGOS */}
+      <section className="py-16 bg-gray-50 px-6 md:px-20 h-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-3xl font-semibold text-center text-blue-800 mb-10"
+      >
+        Nuestros Partners
+      </motion.h2>
+
+      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
+        {logos.map((logo, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            whileHover={{ scale: 1.1 }}
+            className="flex items-center justify-center w-full h-full transition-transform duration-100"
+          >
+            <img
+              src={logo}
+              alt={`logo-${index + 1}`}
+              className="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+            />
+          </motion.div>
+        ))}
+      </div>
+    </section>
     </div>
   );
 };
