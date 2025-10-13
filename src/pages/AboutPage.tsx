@@ -295,7 +295,7 @@ const AboutPage = () => {
             className="rounded-2xl shadow-lg object-cover w-full h-64"
           />
           <img
-            src="/images/guest2.jpg"
+            src="/images/diploma6.jpg"
             alt="Entrega de diplomas 3"
             className="rounded-2xl shadow-lg object-cover w-full h-64"
           />
