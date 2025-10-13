@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import courses from '../data/profesorado_colaboradores.json'
+import colaboradores from '../data/profesorado_colaboradores.json'
+import apoyanos from '../data/apoyan.json'
 import logos from '../data/partnners_logos.json'
 
 interface Guest {
@@ -13,7 +14,8 @@ interface Guest {
 const AboutPage = () => {
   const [selectedGuest, setSelectedGuest] = useState<Guest | null>(null);
 
-  const guests: Guest[] = courses
+  const guests: Guest[] = colaboradores
+  const apoyan: Guest[]= apoyanos
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
@@ -196,23 +198,7 @@ const AboutPage = () => {
           Apoyan
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              name: "Dr. Carlos Fernández",
-              role: "Periodista y Analista Internacional",
-              img: "/images/guest1.jpg",
-            },
-            {
-              name: "Lic. María López",
-              role: "Directora de Comunicación Global",
-              img: "/images/guest2.jpg",
-            },
-            {
-              name: "Prof. Juan Ramírez",
-              role: "Editor en Jefe – Diario Internacional",
-              img: "/images/guest3.jpg",
-            },
-          ].map((guest, index) => (
+          {apoyan.map((guest, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -246,12 +232,12 @@ const AboutPage = () => {
             {
               name: "Lic. Jimena Rosero Morales",
               role: "Coordinadora general. Experta directora en eventos de belleza, moda y gestión cultural y empresaria y presidenta de la Aso Círculo de Comunicación  y medios en Europa.",
-              img: "/images/logo.png",
+              img: "/images/juimena.jpg",
             },
             {
               name: "Nelly Rojas",
               role: "Coordinadora Programas Debecas",
-              img: "/images/cv-foto.jpg",
+              img: "/images/nelly_rojas.jpg",
             },
           ].map((guest, index) => (
             <motion.div
@@ -294,7 +280,22 @@ const AboutPage = () => {
             className="rounded-2xl shadow-lg object-cover w-full h-64"
           />
           <img
+            src="/images/diploma3.jpg"
+            alt="Entrega de diplomas 1"
+            className="rounded-2xl shadow-lg object-cover w-full h-64"
+          />
+          <img
+            src="/images/guest3.jpg"
+            alt="Entrega de diplomas 2"
+            className="rounded-2xl shadow-lg object-cover w-full h-64"
+          />
+          <img
             src="/images/diploma5.jpg"
+            alt="Entrega de diplomas 3"
+            className="rounded-2xl shadow-lg object-cover w-full h-64"
+          />
+          <img
+            src="/images/guest2.jpg"
             alt="Entrega de diplomas 3"
             className="rounded-2xl shadow-lg object-cover w-full h-64"
           />
@@ -325,7 +326,7 @@ const AboutPage = () => {
             <img
               src={logo}
               alt={`logo-${index + 1}`}
-              className="h-28 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-28 w-auto object-contain hover:grayscale-0 transition-all duration-300"
             />
           </motion.div>
         ))}
