@@ -263,6 +263,41 @@ const AboutPage = () => {
         </div>
       </section>
 
+       {/*  El director con persolidades relevantes */}
+      <section className="py-16 px-6 md:px-20">
+        <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
+           El director con persolidades relevantes
+        </h2>
+        <div className="grid grid-cols-1  gap-8 max-w-6xl mx-auto">
+          {[
+            {
+              name: "Jaume Collboni Alcalde de la Cuidad de Barcelona",
+              role: "El director con persolidades relevantes aquí con Jaume Collboni Alcalde de la Cuidad de Barcelona",
+              img: "/images/PersolidadesRelevantes.jpg",
+            },
+            
+          ].map((guest, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
+            >
+              <img
+                src={guest.img}
+                alt={guest.name}
+                className="w-full h-auto object-cover"
+              />
+              <div className="p-6 text-center">
+                
+                <p className="text-gray-600 mt-2">{guest.role}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* Graduacion, Promocion 2025 */}
       <section className="py-16 bg-gray-50 px-6 md:px-20">
         <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
