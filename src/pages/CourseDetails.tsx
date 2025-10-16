@@ -1,59 +1,31 @@
-// type Course = {
-//   id: string
-//   title: string
-//   description: string
-
-// }
-
-// const CoursePage = ({ course }: { course: Course }) => {
-//   return (
-//     <div>{course.title}</div>
-//   )
-// }
-
-// export default CoursePage
-
-
-
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
+import courses from "../data/courses.json";
 
-// Пример данных (в реальном проекте можно импортировать или получать с API)
-const courses = [
-  {
-    id: "investigacion",
-    title: "Periodismo de Investigación",
-    image: "/images/investigacion.jpg",
-    description: `
-      Este curso está diseñado para formar periodistas capaces de investigar a fondo,
-      descubrir verdades ocultas y exponer hechos de interés público con rigor, ética
-      y responsabilidad. A través de una combinación de teoría, análisis de casos reales
-      y prácticas profesionales, los participantes aprenderán a desarrollar investigaciones
-      periodísticas sólidas, desde la elección del tema hasta la publicación del reportaje.
-    `,
-    content: `
-      En este programa, los estudiantes explorarán métodos avanzados de investigación
-      periodística, incluyendo:
-      - Técnicas de verificación de datos y fuentes.
-      - Acceso a información pública y documentos.
-      - Uso de bases de datos, periodismo de datos y análisis digital.
-      - Elaboración de reportajes de investigación con impacto social.
-      - Consideraciones éticas y legales del periodismo de investigación.
-      
-      Al finalizar el curso, los participantes estarán preparados para planificar y ejecutar
-      investigaciones periodísticas de alta calidad, contribuyendo a la transparencia y a la verdad.
-    `,
-    duration: "12 semanas",
-    mode: "Online / Presencial",
-    language: "Español / Inglés",
-  },
-  // Можно добавить другие курсы по аналогии
-];
+interface Section {
+  title: string;
+  description: string | string[];
+}
+
+interface Course {
+  id: string;
+  title: string;
+  description: string;
+  contenido: Section;
+  dirigido: Section;
+  modalidad: Section;
+  duracion: Section;
+  teacher: string;
+  level: string;
+  certificacion: Section;
+   language: string;
+  image: string;
+}
 
 export default function CourseDetails() {
   const { id } = useParams<{ id: string }>();
-  const course = courses.find((c) => c.id === id);
+  const course: Course | undefined = courses.find((c) => c.id === id);
 
   if (!course) {
     return (
@@ -81,14 +53,14 @@ export default function CourseDetails() {
           >
             {course.title}
           </motion.h1>
-          <p className="text-lg mt-3">{course.mode}</p>
+          
         </div>
       </section>
 
       {/* Back Button */}
       <div className="max-w-5xl mx-auto px-6 md:px-10 mt-8">
         <Link
-          to="/courses"
+          to="/coursos"
           className="inline-flex items-center text-blue-900 font-medium hover:underline"
         >
           <ArrowLeft className="w-4 h-4 mr-2" /> Volver a cursos
@@ -102,26 +74,45 @@ export default function CourseDetails() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl font-semibold text-blue-900 mb-4">Descripción</h2>
+          <h2 className="text-2xl font-semibold text-blue-900 mb-4">
+            Descripción
+          </h2>
           <p className="text-lg text-gray-700 whitespace-pre-line leading-relaxed">
             {course.description}
           </p>
 
           <h2 className="text-2xl font-semibold text-blue-900 mt-10 mb-4">
-            Contenido del curso
+            {course.contenido.title}
           </h2>
           <p className="text-gray-700 whitespace-pre-line leading-relaxed">
-            {course.content}
+            {Array.isArray(course.contenido.description)
+              ? course.contenido.description.join("\n")
+              : course.contenido.description}
           </p>
-
-          <div className="mt-10 flex flex-wrap gap-6 text-gray-700">
+          <div className="mt-10 flex flex-wrap flex-col gap-6 text-gray-700">
             <div>
-              <span className="font-semibold text-blue-900">Duración: </span>
-              {course.duration}
+              <span className="font-semibold text-blue-900">{course.dirigido.title}: </span>
+              {course.dirigido.description}
+            </div>  
+            <div>
+              <span className="font-semibold text-blue-900">{course.duracion.title}: </span>
+              {course.duracion.description}
             </div>
             <div>
-              <span className="font-semibold text-blue-900">Modalidad: </span>
-              {course.mode}
+              <span className="font-semibold text-blue-900">{course.modalidad.title}: </span>
+              {course.modalidad.description}
+            </div>
+            <div>
+              <span className="font-semibold text-blue-900">Profesor: </span>
+              {course.teacher}
+            </div>
+            <div>
+              <span className="font-semibold text-blue-900">Nivel: </span>
+              {course.level}
+            </div>
+            <div>
+              <span className="font-semibold text-blue-900">{course.certificacion.title}: </span>
+              {course.certificacion.description}
             </div>
             <div>
               <span className="font-semibold text-blue-900">Idioma: </span>

@@ -31,7 +31,9 @@
     "certificacion": {
       "title": "Certificación",
       "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
-    }
+    },
+        "language": "Español / Inglés",
+    "image": "/images/investigacion.jpg"
   },
   {
     "id": "digital",
@@ -65,7 +67,10 @@
     "certificacion": {
       "title": "Certificación",
       "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
-    }
+    },
+   
+    "language": "Español / Inglés",
+    "image": "/images/investigacion.jpg"
   },
   {
     "id": "corresponsalia",
@@ -99,7 +104,9 @@
     "certificacion": {
       "title": "Certificación",
       "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
-    }
+    },
+        "language": "Español / Inglés",
+    "image": "/images/investigacion.jpg"
   },
   {
     "id": "prensa",
@@ -133,6 +140,8 @@
     "certificacion": {
       "title": "Certificación",
       "description": "Al finalizar el curso, se otorga un certificado avalado por la Academia Internacional de Periodismo - Comunicación Global."
-    }
+    },
+        "language": "Español / Inglés",
+    "image": "/images/investigacion.jpg"
   }
 ]

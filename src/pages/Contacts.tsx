@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+// import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 export default function Contacts() {
   return (
@@ -21,7 +22,7 @@ export default function Contacts() {
 
       {/* Contact Info */}
       <section className="py-16 px-6 md:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto text-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto text-center">
           <div>
             <Mail className="w-10 h-10 mx-auto text-blue-700 mb-4" />
             <h3 className="text-xl font-semibold text-blue-900 mb-2">Email</h3>
@@ -34,11 +35,11 @@ export default function Contacts() {
             <p className="text-gray-700">+34 600 123 456</p>
           </div>
 
-          <div>
+          {/* <div>
             <Globe className="w-10 h-10 mx-auto text-blue-700 mb-4" />
             <h3 className="text-xl font-semibold text-blue-900 mb-2">Redes Sociales</h3>
             <p className="text-gray-700">Facebook · Instagram · LinkedIn</p>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -93,7 +94,7 @@ export default function Contacts() {
       </section>
 
       {/* Optional: Map or Image */}
-      <section className="py-16 px-6 md:px-20 text-center">
+      {/* <section className="py-16 px-6 md:px-20 text-center">
         <MapPin className="w-10 h-10 mx-auto text-blue-700 mb-4" />
         <p className="text-lg text-gray-700">
           Nuestra sede internacional – Madrid, España  
@@ -103,7 +104,7 @@ export default function Contacts() {
           alt="Ubicación de la academia"
           className="rounded-2xl shadow-lg mx-auto mt-6 w-full md:w-2/3 object-cover"
         />
-      </section>
+      </section> */}
     </div>
   );
 }
