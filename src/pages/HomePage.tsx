@@ -51,7 +51,7 @@ const HomePage = () => {
         playsInline
         poster={bgUrl}
       >
-        <source src="/video/hero-video.mp4" type="video/mp4" />
+        <source src="/video/hero-video2.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео.
       </video>
 
