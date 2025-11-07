@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import bgCover from "../assets/hero1.jpg";
+import bgCover from "../assets/hero1.png";
 
 const HomePage = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -14,8 +14,8 @@ const HomePage = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    // Настраиваем скорость видео (пример: 0.75 = медленнее)
-    video.playbackRate = 0.5;
+    // Настраиваем скорость видео (пример: 0.5 = медленнее)
+    video.playbackRate = 0.4;
 
     const handleTimeUpdate = () => {
       // За 1 секунду до конца начинаем плавное затухание
@@ -45,13 +45,13 @@ const HomePage = () => {
       {/* Фоновое видео */}
       <video
         ref={videoRef}
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${fade ? "opacity-0" : "opacity-100"}`}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${fade ? "opacity-80" : "opacity-100"}`}
         autoPlay
         muted
         playsInline
         poster={bgUrl}
       >
-        <source src="/video/hero-video2.mp4" type="video/mp4" />
+        <source src="/video/hero-video3.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео.
       </video>
 

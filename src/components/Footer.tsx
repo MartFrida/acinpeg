@@ -19,6 +19,12 @@ const Footer = () => {
             </a>
           </li>
           <li className="flex justify-center md:justify-start items-center">
+            <a href="tel:+34666786097" className="flex flex-row items-center">
+              {" "}
+              <FaPhone className="mr-2" /> +34 666 786 097
+            </a>
+          </li>
+          <li className="flex justify-center md:justify-start items-center">
             <a
               href="mailto:acinpec@gmail.com"
               className="flex flex-row items-center"

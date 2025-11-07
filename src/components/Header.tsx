@@ -7,7 +7,7 @@ const Header = () => {
       <NavLink to='/' className=''><img src={logo} alt="Logo" className='max-w-20' /></NavLink>
       <div className='flex gap-4 items-center'>
         <NavLink to='/about' className=''>About</NavLink>
-        <NavLink to='/coursos' className=''>Coursos</NavLink>
+        <NavLink to='/coursos' className=''>Cursos</NavLink>
         <NavLink to='/contacts' className=''>Contacts</NavLink>
       </div>
     </nav>

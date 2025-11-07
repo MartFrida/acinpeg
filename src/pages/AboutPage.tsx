@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import colaboradores from '../data/profesorado_colaboradores.json'
-import apoyanos from '../data/apoyan.json'
-import logos from '../data/partnners_logos.json'
+import colaboradores from "../data/profesorado_colaboradores.json";
+import apoyanos from "../data/apoyan.json";
+import logos from "../data/partnners_logos.json";
 
 interface Guest {
   name: string;
@@ -14,8 +14,8 @@ interface Guest {
 const AboutPage = () => {
   const [selectedGuest, setSelectedGuest] = useState<Guest | null>(null);
 
-  const guests: Guest[] = colaboradores
-  const apoyan: Guest[]= apoyanos
+  const guests: Guest[] = colaboradores;
+  const apoyan: Guest[] = apoyanos;
 
   return (
     <div className="min-h-screen bg-white text-gray-800">
@@ -47,8 +47,8 @@ const AboutPage = () => {
             Nuestra Misión
           </h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            ACINPECG en estos 25 años haciendo periodismo internacional desde su
-            base que está en Barcelona. Itenta ser un recurso de alta calidad
+           <span className="font-semibold">ACINPECG</span>  en estos 25 años haciendo periodismo internacional desde su
+            base que está en Barcelona. Intenta ser un recurso de alta calidad
             para directores ejecutivos, empresarios, instituciones
             internacionales, diplomáticos e investigadores académicos.{" "}
           </p>
@@ -121,6 +121,18 @@ const AboutPage = () => {
             Director General de la Academia Internacional de Periodismo y
             Comunicación Global "ACINPECG"
           </p>
+          <p className="text-lg leading-relaxed text-gray-700">
+            Fundador de la primera cadena de televisión nacional en España
+            "Canal Latino TV"
+          </p>
+          <p className="text-lg leading-relaxed text-gray-700">
+            Miembro de la FeSP, SPM, SPB, Federación Internacional de
+            Periodistas, IJF
+          </p>
+          <p className="text-lg leading-relaxed text-gray-700">
+            Jefe de redacción periódicos: Equinoccio, El Migrante, LatiNews,
+            Diáspora
+          </p>
         </motion.div>
       </section>
 
@@ -192,10 +204,10 @@ const AboutPage = () => {
         )}
       </section>
 
-      {/* Apoyan */}
+      {/*Avalan */}
       <section className="py-16 px-6 md:px-20">
         <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
-          Apoyan
+          Avalan
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {apoyan.map((guest, index) => (
@@ -215,7 +227,6 @@ const AboutPage = () => {
                 <h3 className="text-xl font-semibold text-blue-900">
                   {guest.name}
                 </h3>
-                
               </div>
             </motion.div>
           ))}
@@ -235,10 +246,15 @@ const AboutPage = () => {
               img: "/images/juimena.jpg",
             },
             {
-              name: "Nelly Rojas",
-              role: "Coordinadora Programas Debecas",
-              img: "/images/nelly_rojas.jpg",
+              name: "Lic. Karina Fuentes",
+              role: "CEO. Experta en administración empresarial",
+              img: "/images/karina_fuentes.png",
             },
+            {
+              name: "Lic. Eric Maldonado",
+              role: "Experto en marketing, publicidad y relaciones internacionales",
+              img: "/images/eric_maldonado.png",
+            }
           ].map((guest, index) => (
             <motion.div
               key={index}
@@ -263,10 +279,28 @@ const AboutPage = () => {
         </div>
       </section>
 
-       {/*  El director con persolidades relevantes */}
+      {/* Medios de Comunicación Nacional e Internacional */}
       <section className="py-16 px-6 md:px-20">
         <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
-           El director con persolidades relevantes
+          Medios de Comunicación Nacional e Internacional, que dirigimos,
+          coordinamos y colaboramos
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <ul>
+            <ol>- Espania Latina</ol>
+            <ol>- Magazine Ecuador</ol>
+            <ol>- Revista Viscion</ol>
+            <ol>- El Emigrante</ol>
+            <ol>- El Ecuatoriano</ol>
+            <ol>- Diaspora Internacional</ol>
+          </ul>
+        </div>
+      </section>
+
+      {/*  El director con persolidades relevantes */}
+      <section className="py-16 px-6 md:px-20">
+        <h2 className="text-3xl font-semibold text-center text-blue-900 mb-10">
+          El director con persolidades relevantes
         </h2>
         <div className="grid grid-cols-1  gap-8 max-w-6xl mx-auto">
           {[
@@ -275,7 +309,6 @@ const AboutPage = () => {
               role: "El director con persolidades relevantes aquí con Jaume Collboni Alcalde de la Cuidad de Barcelona",
               img: "/images/PersolidadesRelevantes.jpg",
             },
-            
           ].map((guest, index) => (
             <motion.div
               key={index}
@@ -290,7 +323,6 @@ const AboutPage = () => {
                 className="w-full h-auto object-cover"
               />
               <div className="p-6 text-center">
-                
                 <p className="text-gray-600 mt-2">{guest.role}</p>
               </div>
             </motion.div>
@@ -339,34 +371,34 @@ const AboutPage = () => {
 
       {/* NUESTROS PARTNERS LOGOS */}
       <section className="py-16 bg-gray-50 px-6 md:px-20 h-auto">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-3xl font-semibold text-center text-blue-800 mb-10"
-      >
-        Nuestros Partners
-      </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl font-semibold text-center text-blue-800 mb-10"
+        >
+          Nuestros Colaboradores y Patrocinadores
+        </motion.h2>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
-        {logos.map((logo, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            whileHover={{ scale: 1.1 }}
-            className="flex items-center justify-center w-full h-full transition-transform duration-100"
-          >
-            <img
-              src={logo}
-              alt={`logo-${index + 1}`}
-              className="h-28 w-auto object-contain hover:grayscale-0 transition-all duration-300"
-            />
-          </motion.div>
-        ))}
-      </div>
-    </section>
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
+          {logos.map((logo, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center justify-center w-full h-full transition-transform duration-100"
+            >
+              <img
+                src={logo}
+                alt={`logo-${index + 1}`}
+                className="h-28 w-auto object-contain hover:grayscale-0 transition-all duration-300"
+              />
+            </motion.div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 // import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { Mail, Phone } from "lucide-react";
+import { FaPhone } from "react-icons/fa";
 
 export default function Contacts() {
   return (
@@ -16,7 +17,8 @@ export default function Contacts() {
           Contáctanos
         </motion.h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto">
-          Estamos aquí para responder tus preguntas y acompañarte en tu formación periodística.
+          Estamos aquí para responder tus preguntas y acompañarte en tu
+          formación periodística.
         </p>
       </section>
 
@@ -31,8 +33,16 @@ export default function Contacts() {
 
           <div>
             <Phone className="w-10 h-10 mx-auto text-blue-700 mb-4" />
-            <h3 className="text-xl font-semibold text-blue-900 mb-2">Teléfono / WhatsApp</h3>
-            <p className="text-gray-700">+34 600 123 456</p>
+            <h3 className="text-xl font-semibold text-blue-900 mb-2">
+              Teléfono / WhatsApp
+            </h3>
+            <a
+              href="tel:+34666786097"
+              className="flex flex-row items-center justify-center"
+            >
+              {" "}
+              <FaPhone className="mr-2" /> +34 666 786 097
+            </a>
           </div>
 
           {/* <div>
@@ -44,7 +54,7 @@ export default function Contacts() {
       </section>
 
       {/* Contact Form */}
-      <section className="bg-gray-50 py-16 px-6 md:px-20">
+      {/* <section className="bg-gray-50 py-16 px-6 md:px-20">
         <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-10">
           <h2 className="text-3xl font-semibold text-center text-blue-800 mb-8">
             Envíanos un mensaje
@@ -91,7 +101,7 @@ export default function Contacts() {
             </motion.button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Optional: Map or Image */}
       {/* <section className="py-16 px-6 md:px-20 text-center">
