@@ -5,6 +5,11 @@ import apoyanos from "../data/apoyan.json";
 import graduacion from "../data/graduacion20251004.json";
 import logos from "../data/partnners_logos.json";
 import noslogos from "../data/partnners_nos_logos.json";
+import SectionTitle from "../components/SectionTitle";
+import Divider from "../components/Divider";
+import AnimatedCard from "../components/AnimatedCard";
+import CardGrid from "../components/CardGrid";
+import LogoGrid from "../components/LogoGrid";
 
 interface Guest {
   name: string;
@@ -47,10 +52,7 @@ const AboutPage = () => {
           vocación global
         </motion.p>
       </section>
-
-      {/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent "></div>
-
+      <Divider />
       {/* Mission Section */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
@@ -60,9 +62,8 @@ const AboutPage = () => {
         className="py-10 lg:py-20 px-2 md:px-10"
       >
         <div className="lg:max-w-5xl mx-auto bg-slate-800/60 p-4 md:p-10 rounded-2xl border border-slate-700 shadow-lg backdrop-blur-md">
-          <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-4 md:mb-10 uppercase tracking-wider font-serif">
-            Nuestra Misión
-          </h2>
+          <SectionTitle>Nuestra Misión</SectionTitle>
+
           <p className="text-gray-300 md:text-lg text-justify leading-relaxed mb-6">
             <span className="font-semibold text-amber-300">ACINPECG</span> en
             estos 25 años haciendo periodismo internacional desde Barcelona.
@@ -140,44 +141,29 @@ const AboutPage = () => {
           </div>
         </div>
       </motion.section>
-
-      {/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
-
+      <Divider />
       {/* Profesorado y Colaboradores */}
       <section className="py-10 lg:py-20 px-2 md:px-10 pb-0 ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-12 uppercase tracking-wider font-serif ">
-          Profesorado y Colaboradores
-        </h2>
+        <SectionTitle>Profesorado y Colaboradores</SectionTitle>
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
-          {guests.map((guest, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-md hover:shadow-amber-400/30 hover:scale-[1.02] transition-all duration-300"
+        <CardGrid>
+          {guests.map((guest, i) => (
+            <AnimatedCard
+              key={i}
+              index={i}
+              imgSrc={guest.img}
+              title={guest.name}
             >
-              <img
-                src={guest.img}
-                alt={guest.name}
-                className="w-full h-48 lg:h-64 object-cover "
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-slate-200">
-                  {guest.name}
-                </h3>
-                <button
-                  onClick={() => setSelectedGuest(guest)}
-                  className="mt-4 px-5 py-2 bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-semibold rounded-lg shadow transition"
-                >
-                  Más información
-                </button>
-              </div>
-            </motion.div>
+              <button
+                onClick={() => setSelectedGuest(guest)}
+                className="mt-4 px-5 py-2 bg-amber-500 text-slate-900 rounded-lg"
+              >
+                Más información
+              </button>
+            </AnimatedCard>
           ))}
-        </div>
+        </CardGrid>
+
         {/* Modal */}
         {selectedGuest && (
           <div
@@ -211,10 +197,8 @@ const AboutPage = () => {
           </div>
         )}
       </section>
-
       {/* DIVIDER */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
-
       {/*Avalan */}
       <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-2 md:px-10  pb-0">
         <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
@@ -222,31 +206,19 @@ const AboutPage = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
           {apoyan.map((guest, index) => (
-            <motion.div
+            <AnimatedCard
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 rounded-2xl shadow-md overflow-hidden hover:shadow-slate-400/20 transition-all duration-300"
+              index={index}
+              imgSrc={guest.img}
+              title={guest.name}
             >
-              <img
-                src={guest.img}
-                alt={guest.name}
-                className="w-full h-48 lg:h-64 object-cover rounded-t-2xl"
-              />
-              <div className="p-4 lg:p-6 text-center">
-                <h4 className="lg:text-xl lg:font-semibold text-gray-200">
-                  {guest.name}
-                </h4>
-              </div>
-            </motion.div>
+
+            </AnimatedCard>
           ))}
         </div>
       </section>
-
-{/* DIVIDER */}
+      {/* DIVIDER */}
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
-
       {/* Coordinación y equipo de coordinación */}
       <section className="py-10 lg:py-20 px-2 md:px-10 ">
         <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
@@ -292,55 +264,17 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-{/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
-
+      <Divider />
       {/* Medios de Comunicación Nacional e Internacional */}
-      <section className="py-10 lg:py-20 bg-white/5  hover:bg-white/10 transition px-2 md:px-20 ">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-xl lg:text-4xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
-        >
-          Medios de Comunicación, que dirigimos,
-          coordinamos y colaboramos
-        </motion.h2>
-
-        <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
-          {noslogos.map((logo, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              whileHover={{ scale: 1.1 }}
-              className="flex items-center justify-center w-full h-full transition-transform duration-100"
-            >
-              <img
-                src={logo}
-                alt={`logo-${index + 1}`}
-                className="h-16 md:h-24 w-auto object-contain hover:grayscale-0 transition-all duration-300"
-              />
-            </motion.div>
-          ))}
-        </div>
+      <section className="py-10 px-4">
+        <SectionTitle className="text-white">Medios que dirigimos, coordinamos y colaboramos</SectionTitle>
+        <LogoGrid items={noslogos} size="h-20" />
       </section>
 
-{/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
-
+      <Divider />
       {/*  El director con persolidades relevantes */}
       <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-2 md:px-10 shadow-xl/20">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]"
-        >
-          El director con persolidades relevantes
-        </motion.h2>
+        <SectionTitle >El director con persolidades relevantes</SectionTitle>
         <div className="grid grid-cols-1  gap-8 max-w-6xl mx-auto">
           {[
             {
@@ -368,15 +302,10 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-{/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
-
+      <Divider />
       {/* Graduacion, Promocion 2025 */}
       <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 text-gray-200 px-2 md:px-10">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
-          Graduacion, Promocion 2025
-        </h2>
+        <SectionTitle > Graduacion, Promocion 2025</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
           {grad.map((alumnos, index) => (
             <motion.div
@@ -395,21 +324,10 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-      {/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
-
+      <Divider />
       {/* NUESTROS PARTNERS LOGOS */}
       <section className="py-10 lg:py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-2 md:px-10 ">
-        
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-2xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
-        >
-          Nuestros Colaboradores y Patrocinadores
-        </motion.h2>
+        <SectionTitle className="text-white">Nuestros Colaboradores y Patrocinadores</SectionTitle>
 
         <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
           {logos.map((logo, index) => (
@@ -430,9 +348,7 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-      {/* DIVIDER */}
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+      <Divider />{" "}
     </div>
   );
 };
