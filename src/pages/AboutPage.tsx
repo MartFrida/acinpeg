@@ -27,47 +27,50 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-gray-200 font-sans leading-relaxed">
-
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-950 to-slate-700 shadow-xl/20 text-white py-20 text-center">
+      <section className="bg-gradient-to-r from-slate-950 to-slate-700 shadow-inner text-white py-24  text-center">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide"
+          className="text-4xl md:text-5xl font-bold leading-16 mb-4 uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,191,0,0.15)]"
         >
           Academia Internacional de Periodismo y Comunicación Global
         </motion.h1>
         <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl max-w-2xl mx-auto text-gray-300"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-lg md:text-xl max-w-3xl mx-auto text-gray-300"
         >
-          Formando profesionales del periodismo para un mundo global e
-          interconectado
+          Formando profesionales del periodismo con ética, pensamiento crítico y
+          vocación global
         </motion.p>
       </section>
 
+      {/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent "></div>
+
       {/* Mission Section */}
-      <section className="py-20 px-6 shadow-xl/20 md:px-20 text-justify ">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto bg-slate-800/70 p-10 rounded-2xl border border-slate-700 shadow-lg"
-        >
-          <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="py-20 px-6 md:px-20"
+      >
+        <div className="max-w-5xl mx-auto bg-slate-800/60 p-10 rounded-2xl border border-slate-700 shadow-lg backdrop-blur-md">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif">
             Nuestra Misión
           </h2>
-          <p className="text-gray-300 text-lg text-left md:text-justify leading-relaxed mb-4">
-            <span className="font-semibold">ACINPECG</span> en
+          <p className="text-gray-300 text-lg text-justify leading-relaxed mb-6">
+            <span className="font-semibold text-amber-300">ACINPECG</span> en
             estos 25 años haciendo periodismo internacional desde Barcelona.
             Proporciona recursos de alta calidad a directores ejecutivos,
             empresarios, instituciones internacionales, diplomáticos e
             investigadores académicos.
           </p>
-          <ul className="list-disc ml-6 text-gray-300 mb-4 space-y-2">
+          <ul className="list-disc ml-6 text-gray-300 mb-6 space-y-2">
             <li>
               Educar sobre liderazgo, gestión empresarial y responsabilidad
               social.
@@ -112,46 +115,49 @@ const AboutPage = () => {
             construir un mundo mejor y para todos.
           </p>
           <br></br>
-          <p className="text-lg leading-relaxed text-gray-200">Atentamente </p>
-          <br></br>
 
-          <p className="font-semibold text-lg leading-relaxed text-gray-200">
-            Amaruk Kayshapanta Anchapacxi
-          </p>
-          <p className="font-semibold text-lg leading-relaxed text-gray-200">
-            Director General de la Academia Internacional de Periodismo y
-            Comunicación Global "ACINPECG"
-          </p>
-          <p className="font-semibold text-lg leading-relaxed text-gray-200">
-            Fundador de la primera cadena de televisión nacional en España
-            "Canal Latino TV"
-          </p>
-          <p className="font-semibold text-lg leading-relaxed text-gray-200">
-            Miembro de la FeSP, SPM, SPB, Federación Internacional de
-            Periodistas, IJF
-          </p>
-          <p className="font-semibold text-lg leading-relaxed text-gray-200">
-            Jefe de redacción periódicos: Equinoccio, El Migrante, LatiNews,
-            Diáspora
-          </p>
-        </motion.div>
-      </section>
-      
+          <div className="mt-8 border-t border-slate-700 pt-6">
+            <p className="text-lg font-semibold text-gray-100 tracking-wide">
+              Amaruk Kayshapanta Anchapacxi
+            </p>
+            <p className="text-sm text-gray-400">
+              Director General — Academia Internacional de Periodismo y
+              Comunicación Global (ACINPECG)
+            </p>
+
+            <p className="text-sm text-gray-400">
+              Fundador de la primera cadena de televisión nacional en España
+              "Canal Latino TV"
+            </p>
+            <p className="text-sm text-gray-400">
+              Miembro de la FeSP, SPM, SPB, Federación Internacional de
+              Periodistas, IJF
+            </p>
+            <p className="text-sm text-gray-400">
+              Jefe de redacción periódicos: Equinoccio, El Migrante, LatiNews,
+              Diáspora
+            </p>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/* Profesorado y Colaboradores */}
-      <section className="py-20 shadow-xl/20 px-6 md:px-20 pb-0">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
+      <section className="py-20 px-6 md:px-20 pb-0">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-12 uppercase tracking-wider font-serif ">
           Profesorado y Colaboradores
         </h2>
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto ">
           {guests.map((guest, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 rounded-2xl shadow-md overflow-hidden hover:shadow-slate-400/20 transition-all duration-300 "
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              className="bg-slate-800/90 border border-slate-700 rounded-2xl overflow-hidden shadow-md hover:shadow-amber-400/30 hover:scale-[1.02] transition-all duration-300"
             >
               <img
                 src={guest.img}
@@ -188,7 +194,7 @@ const AboutPage = () => {
             >
               <button
                 onClick={() => setSelectedGuest(null)}
-                className="absolute top-2 right-2 text-gray-300 hover:text-white "
+                className="absolute top-3 right-3 text-gray-300 hover:text-white "
               >
                 ✕
               </button>
@@ -204,10 +210,10 @@ const AboutPage = () => {
             </motion.div>
           </div>
         )}
-        <div className="h-px bg-gradient-to-r from-transparent via-amber-400/40 to-transparent my-12"></div>
-        
       </section>
-      
+
+      {/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
 
       {/*Avalan */}
       <section className="py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-6 md:px-20 shadow-xl/20 pb-0">
@@ -237,6 +243,9 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
+
+{/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
 
       {/* Coordinación y equipo de coordinación */}
       <section className="py-20 px-6 md:px-20 ">
@@ -284,13 +293,16 @@ const AboutPage = () => {
         </div>
       </section>
 
+{/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+
       {/* Medios de Comunicación Nacional e Internacional */}
       <section className="py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-6 md:px-20 ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-semibold text-center text-blue-800 mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
+          className="text-3xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
         >
           Medios de Comunicación Nacional e Internacional, que dirigimos,
           coordinamos y colaboramos
@@ -315,6 +327,9 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
+
+{/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/*  El director con persolidades relevantes */}
       <section className="py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-6 md:px-20 shadow-xl/20">
@@ -354,13 +369,16 @@ const AboutPage = () => {
         </div>
       </section>
 
+{/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+
       {/* Graduacion, Promocion 2025 */}
       <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 text-gray-200 px-6 md:px-20">
         <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
           Graduacion, Promocion 2025
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {grad.map((alumnos, index)=>(
+          {grad.map((alumnos, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
@@ -368,24 +386,27 @@ const AboutPage = () => {
               transition={{ duration: 0.6 }}
               className="bg-slate-800/80 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition"
             >
-<img
+              <img
                 src={alumnos.src}
                 alt={alumnos.alt}
                 className="w-full h-64 object-cover rounded-t-2xl"
               />
             </motion.div>
           ))}
-         
         </div>
       </section>
 
+      {/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
+
       {/* NUESTROS PARTNERS LOGOS */}
-      <section className="py-20 bg-gray-50 px-6 md:px-20 h-auto">
+      <section className="py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-6 md:px-20 ">
+        
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-semibold text-center text-blue-800 mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
+          className="text-3xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
         >
           Nuestros Colaboradores y Patrocinadores
         </motion.h2>
@@ -409,9 +430,11 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
+
+      {/* DIVIDER */}
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
     </div>
   );
 };
 
 export default AboutPage;
-   
