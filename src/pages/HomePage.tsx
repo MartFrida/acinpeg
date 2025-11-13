@@ -8,7 +8,10 @@ const HomePage = () => {
   const [fade, setFade] = useState(false);
 
   // Получаем корректный URL фона
-  const bgUrl = typeof bgCover === "string" ? bgCover : (bgCover as { src: string })?.src ?? "";
+  const bgUrl =
+    typeof bgCover === "string"
+      ? bgCover
+      : (bgCover as { src: string })?.src ?? "";
 
   useEffect(() => {
     const video = videoRef.current;
@@ -45,14 +48,16 @@ const HomePage = () => {
       {/* Фоновое видео */}
       <video
         ref={videoRef}
-        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${fade ? "opacity-80" : "opacity-100"}`}
+        className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
+          fade ? "opacity-80" : "opacity-100"
+        }`}
         autoPlay
         muted
         playsInline
         poster={bgUrl}
       >
         <source src="/video/hero-video3.mp4" type="video/mp4" />
-        Ваш браузер не поддерживает видео.
+        Your browser does not contain any videos.
       </video>
 
       {/* Полупрозрачный оверлей */}
@@ -60,19 +65,31 @@ const HomePage = () => {
 
       {/* Контент */}
       <section className="relative z-10 rounded-lg">
-        
-          <div className="bg-slate-950/60 p-4 md:p-8 rounded-lg">
-            <h1 className="tracking-widest text-5xl md:text-7xl font-bold leading-relaxed text-center text-white" style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}>
-              ACINPECG
-            </h1>
-            <h2 className="text-2xl mb-4 md:text-3xl font-bold leading-relaxed tracking-wide text-center text-white" style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}>
-              ACADEMIA INTERNACIONAL DE PERIODISMO Y COMUNICACIÓN GLOBAL
-            </h2>
-            <Link href="/coursos" className="px-6 py-3 bg-slate-950 text-white font-bold leading-relaxed tracking-widest rounded-xl hover:bg-slate-900 transition uppercase">
-              Ver cursos
-            </Link>
-          </div>
-        
+        <div className="bg-slate-950/60 p-4 md:p-8 rounded-lg">
+          <h1
+            className="tracking-widest text-5xl md:text-7xl font-bold leading-relaxed text-center text-white"
+            style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}
+          >
+            ACINPECG
+          </h1>
+          <h2
+            className="text-2xl mb-4 md:text-3xl font-bold leading-relaxed tracking-wide text-center text-white"
+            style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 0.9)" }}
+          >
+            ACADEMIA INTERNACIONAL DE PERIODISMO Y COMUNICACIÓN GLOBAL
+          </h2>
+          <Link
+            href="/coursos"
+            className="px-6 py-3 
+             bg-gradient-to-r from-amber-400 to-amber-600 
+             text-white font-bold leading-relaxed tracking-widest 
+             rounded-xl uppercase 
+             transition-all duration-500 
+             hover:bg-gradient-to-l  from-amber-400 to-amber-600"
+          >
+            Ver cursos
+          </Link>
+        </div>
       </section>
     </main>
   );

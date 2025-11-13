@@ -4,7 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-950 text-white p-4 md:p-6 flex justify-between  ">
+    <footer className="bg-slate-950 text-white p-4 md:p-6   ">
+      <div className="flex justify-between">
       <div>
         <NavLink to="/" className="">
           <img src={logo} alt="Logo" className="max-w-24 " />
@@ -37,6 +38,11 @@ const Footer = () => {
           </li>
                   </ul>
       </div>
+      </div>
+      <p className="pt-4 text-center text-gray-400 text-sm border-t border-slate-700 mt-8">
+  © 2025 Academia Internacional de Periodismo y Comunicación Global — Todos los derechos reservados.
+</p>
+      
     </footer>
   );
 };
