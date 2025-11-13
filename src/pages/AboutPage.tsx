@@ -28,12 +28,12 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-gray-200 font-sans leading-relaxed">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-slate-950 to-slate-700 shadow-inner text-white py-24  text-center">
+      <section className="bg-gradient-to-r from-slate-950 to-slate-700 shadow-inner text-white py-16 md:py-24 px-4 text-center">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-bold leading-16 mb-4 uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,191,0,0.15)]"
+          className="text-3xl md:text-5xl font-bold leading-12 md:leading-14 lg:leading-16 mb-4 uppercase tracking-wide drop-shadow-[0_0_20px_rgba(255,191,0,0.15)]"
         >
           Academia Internacional de Periodismo y Comunicación Global
         </motion.h1>
@@ -57,13 +57,13 @@ const AboutPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="py-20 px-6 md:px-20"
+        className="py-10 lg:py-20 px-2 md:px-10"
       >
-        <div className="max-w-5xl mx-auto bg-slate-800/60 p-10 rounded-2xl border border-slate-700 shadow-lg backdrop-blur-md">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif">
+        <div className="lg:max-w-5xl mx-auto bg-slate-800/60 p-4 md:p-10 rounded-2xl border border-slate-700 shadow-lg backdrop-blur-md">
+          <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-4 md:mb-10 uppercase tracking-wider font-serif">
             Nuestra Misión
           </h2>
-          <p className="text-gray-300 text-lg text-justify leading-relaxed mb-6">
+          <p className="text-gray-300 md:text-lg text-justify leading-relaxed mb-6">
             <span className="font-semibold text-amber-300">ACINPECG</span> en
             estos 25 años haciendo periodismo internacional desde Barcelona.
             Proporciona recursos de alta calidad a directores ejecutivos,
@@ -96,7 +96,7 @@ const AboutPage = () => {
             </li>
           </ul>
 
-          <p className="text-gray-300 leading-relaxed mt-4">
+          <p className="text-gray-300 leading-relaxed mt-4 text-justify">
             Hacemos un periodismo de vanguardia donde la verdad que no salen en
             todos los medios de mundo. Nosotros al no tener un testaferro de
             turno hacemos que la noticia sea informar, investigar, proteger a la
@@ -145,12 +145,12 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/* Profesorado y Colaboradores */}
-      <section className="py-20 px-6 md:px-20 pb-0">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-12 uppercase tracking-wider font-serif ">
+      <section className="py-10 lg:py-20 px-2 md:px-10 pb-0 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-12 uppercase tracking-wider font-serif ">
           Profesorado y Colaboradores
         </h2>
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
           {guests.map((guest, index) => (
             <motion.div
               key={index}
@@ -162,7 +162,7 @@ const AboutPage = () => {
               <img
                 src={guest.img}
                 alt={guest.name}
-                className="w-full h-64 object-cover "
+                className="w-full h-48 lg:h-64 object-cover "
               />
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold text-slate-200">
@@ -181,7 +181,7 @@ const AboutPage = () => {
         {/* Modal */}
         {selectedGuest && (
           <div
-            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 max-w-screen"
             onClick={() => setSelectedGuest(null)}
           >
             <motion.div
@@ -216,11 +216,11 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
 
       {/*Avalan */}
-      <section className="py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-6 md:px-20 shadow-xl/20 pb-0">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
+      <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-2 md:px-10  pb-0">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
           Nos Avalan
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
           {apoyan.map((guest, index) => (
             <motion.div
               key={index}
@@ -232,12 +232,12 @@ const AboutPage = () => {
               <img
                 src={guest.img}
                 alt={guest.name}
-                className="w-full h-64 object-cover rounded-t-2xl"
+                className="w-full h-48 lg:h-64 object-cover rounded-t-2xl"
               />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-gray-200">
+              <div className="p-4 lg:p-6 text-center">
+                <h4 className="lg:text-xl lg:font-semibold text-gray-200">
                   {guest.name}
-                </h3>
+                </h4>
               </div>
             </motion.div>
           ))}
@@ -248,11 +248,11 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
 
       {/* Coordinación y equipo de coordinación */}
-      <section className="py-20 px-6 md:px-20 ">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
+      <section className="py-10 lg:py-20 px-2 md:px-10 ">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
           Coordinación y equipo de coordinación
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
           {[
             {
               name: "Lic. Jimena Rosero Morales",
@@ -280,9 +280,9 @@ const AboutPage = () => {
               <img
                 src={guest.img}
                 alt={guest.name}
-                className="w-full h-64 object-cover"
+                className="w-full h-48 lg:h-64 object-cover"
               />
-              <div className="p-6 text-center">
+              <div className="p-2 lg:p-6 text-center">
                 <h3 className="text-xl font-semibold text-slate-200">
                   {guest.name}
                 </h3>
@@ -297,18 +297,18 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/* Medios de Comunicación Nacional e Internacional */}
-      <section className="py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-6 md:px-20 ">
+      <section className="py-10 lg:py-20 bg-white/5  hover:bg-white/10 transition px-2 md:px-20 ">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
+          className="text-xl lg:text-4xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
         >
-          Medios de Comunicación Nacional e Internacional, que dirigimos,
+          Medios de Comunicación, que dirigimos,
           coordinamos y colaboramos
         </motion.h2>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
+        <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
           {noslogos.map((logo, index) => (
             <motion.div
               key={index}
@@ -321,7 +321,7 @@ const AboutPage = () => {
               <img
                 src={logo}
                 alt={`logo-${index + 1}`}
-                className="h-28 w-auto object-contain hover:grayscale-0 transition-all duration-300"
+                className="h-16 md:h-24 w-auto object-contain hover:grayscale-0 transition-all duration-300"
               />
             </motion.div>
           ))}
@@ -332,12 +332,12 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/*  El director con persolidades relevantes */}
-      <section className="py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-6 md:px-20 shadow-xl/20">
+      <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-2 md:px-10 shadow-xl/20">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]"
+          className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]"
         >
           El director con persolidades relevantes
         </motion.h2>
@@ -373,11 +373,11 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/* Graduacion, Promocion 2025 */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 text-gray-200 px-6 md:px-20">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
+      <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 text-gray-200 px-2 md:px-10">
+        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
           Graduacion, Promocion 2025
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
           {grad.map((alumnos, index) => (
             <motion.div
               key={index}
@@ -389,7 +389,7 @@ const AboutPage = () => {
               <img
                 src={alumnos.src}
                 alt={alumnos.alt}
-                className="w-full h-64 object-cover rounded-t-2xl"
+                className="w-full h-48 lg:h-64 object-cover rounded-t-2xl"
               />
             </motion.div>
           ))}
@@ -400,18 +400,18 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent"></div>
 
       {/* NUESTROS PARTNERS LOGOS */}
-      <section className="py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-6 md:px-20 ">
+      <section className="py-10 lg:py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-2 md:px-10 ">
         
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
+          className="text-2xl font-semibold text-center text-white mb-10 uppercase tracking-wide font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.2)]"
         >
           Nuestros Colaboradores y Patrocinadores
         </motion.h2>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
+        <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
           {logos.map((logo, index) => (
             <motion.div
               key={index}

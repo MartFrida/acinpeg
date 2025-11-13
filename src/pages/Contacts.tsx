@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 // import { Mail, Phone } from "lucide-react";
 import { FaPhone } from "react-icons/fa";
 
@@ -37,6 +37,13 @@ export default function Contacts() {
               Teléfono / WhatsApp
             </h3>
             <a
+              href="tel:+34696869949"
+              className="flex flex-row items-center justify-center"
+            >
+              {" "}
+              <FaPhone className="mr-2" /> +34 696 869 949
+            </a>
+            <a
               href="tel:+34666786097"
               className="flex flex-row items-center justify-center"
             >
@@ -45,16 +52,16 @@ export default function Contacts() {
             </a>
           </div>
 
-          <div>
+          {/* <div>
             <Globe className="w-10 h-10 mx-auto text-blue-700 mb-4" />
             <h3 className="text-xl font-semibold text-blue-900 mb-2">Redes Sociales</h3>
             <p className="text-gray-700">Facebook · Instagram · LinkedIn</p>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Contact Form */}
-      <section className="bg-gray-50 py-16 px-6 md:px-20">
+      {/* <section className="bg-gray-50 py-16 px-6 md:px-20">
         <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-10">
           <h2 className="text-3xl font-semibold text-center text-blue-800 mb-8">
             Envíanos un mensaje
@@ -101,10 +108,10 @@ export default function Contacts() {
             </motion.button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Optional: Map or Image */}
-      <section className="py-16 px-6 md:px-20 text-center">
+      {/* <section className="py-16 px-6 md:px-20 text-center">
         <MapPin className="w-10 h-10 mx-auto text-blue-700 mb-4" />
         <p className="text-lg text-gray-700">
           Nuestra sede internacional – Madrid, España  
@@ -114,7 +121,7 @@ export default function Contacts() {
           alt="Ubicación de la academia"
           className="rounded-2xl shadow-lg mx-auto mt-6 w-full md:w-2/3 object-cover"
         />
-      </section>
+      </section> */}
     </div>
   );
 }
