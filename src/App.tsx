@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CourseDetails from './pages/CourseDetails';
 import CoursosPage from './pages/CoursosPage';
+import NoticiasPage from './pages/NoticiasPage';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
 
@@ -17,8 +19,10 @@ function App() {
         <Route path='/about' element={<AboutPage />} />
         <Route path='/coursos' element={<CoursosPage />} />
         <Route path="/coursos/:id" element={<CourseDetails />} />
+        <Route path='/noticias' element={<NoticiasPage/>} />
         <Route path='/contacts' element={<Contacts />} />
       </Routes>
+       <ScrollToTopButton />
       <Footer />
     </div>
   )
