@@ -28,7 +28,7 @@ export default function Contacts() {
           <div>
             <Mail className="w-10 h-10 mx-auto text-blue-700 mb-4" />
             <h3 className="text-xl font-semibold text-blue-900 mb-2">Email</h3>
-            <p className="text-gray-700">info@academiaperiodismo.org</p>
+            <p className="text-gray-700">acinpecg@gmail.com</p>
           </div>
 
           <div>
