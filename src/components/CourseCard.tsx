@@ -1,41 +1,32 @@
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { BookOpen } from 'lucide-react'
-
+import { Link } from "react-router-dom";
 type Course = {
   id: string
   title: string
   description: string
 }
 
-const CourseCard = ({ course }: { course: Course }) => {
+
+
+export default function CourseCard({ course }: { course: Course }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.03 }}
-      transition={{ type: 'spring', stiffness: 200, damping: 12 }}
-      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-700 border border-slate-600 shadow-lg hover:shadow-xl transition-all group"
-    >
-      <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="bg-slate-900/70 backdrop-blur-md border border-slate-700 rounded-2xl p-6 shadow-md 
+                    hover:shadow-amber-400/20 transition hover:scale-[1.02] duration-300 
+                    flex flex-col min-h-[320px] h-full">
 
-      <div className="relative p-6 flex flex-col h-full w-full text-justify">
-        <div className="flex items-center gap-2 mb-3">
-          <BookOpen className="w-5 h-5 text-amber-400" />
-          <h3 className="text-2xl font-semibold text-amber-400">{course.title}</h3>
-        </div>
+      <h3 className="text-xl font-semibold text-amber-400 mb-3">
+        {course.title}
+      </h3>
 
-        <p className="text-gray-300 mb-6 text-sm leading-relaxed flex-grow">
-          {course.description}
-        </p>
-
-        <Link
-          href={`/coursos/${course.id}`}
-          className="m-auto inline-block text-sm font-medium text-blue-300 hover:text-amber-400 transition"
-        >
-          <span className="underline-offset-2 group-hover:underline uppercase">Saber mas</span> →
-        </Link>
-      </div>
-    </motion.div>
-  )
+      <p className="text-gray-300 text-sm text-justify leading-relaxed mb-4 flex-grow">
+        {course.description}
+      </p>
+<Link to={`/coursos/${course.id}`} className="mt-auto w-fit">
+<button className="px-4 py-2 bg-amber-500/90 hover:bg-amber-500 text-slate-900 
+                         font-medium rounded-lg transition mt-auto w-fit">
+        Más información
+      </button>
+</Link>
+      
+    </div>
+  );
 }
-
-export default CourseCard

@@ -4,7 +4,7 @@ import Contacts from './pages/Contacts';
 import AboutPage from './pages/AboutPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CourseDetails from './pages/CourseDetails';
+import CourseDetails from './pages/CourseDetailsPage';
 import CoursosPage from './pages/CoursosPage';
 import NoticiasPage from './pages/NoticiasPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
