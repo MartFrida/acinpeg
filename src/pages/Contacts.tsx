@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaPhone } from "react-icons/fa";
 import Divider from "../components/Divider";
+import ContactForm from "../components/ContactForm";
 
 export default function Contacts() {
   return (
@@ -78,6 +79,10 @@ export default function Contacts() {
               </a>
             </div>
           </motion.div>
+          
+         
+        </div>
+         <ContactForm />
 
           {/* LOCATION */}
           <motion.div
@@ -94,7 +99,6 @@ export default function Contacts() {
             <p className="text-gray-300 text-center text-lg">Barcelona, Madrid, España</p>
           </motion.div>
 
-        </div>
       </section>
     </div>
   );
