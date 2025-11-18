@@ -36,46 +36,60 @@ export default function NoticiasPage() {
           transition={{ duration: 1, delay: 0.3 }}
           className="text-lg md:text-xl max-w-3xl mx-auto text-gray-300 mt-4"
         >
-          Actualidad, iniciativas, eventos y comunicados oficiales de nuestra Academia.
+          Actualidad, iniciativas, eventos y comunicados oficiales de nuestra
+          Academia.
         </motion.p>
       </section>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent my-16"></div>
+      <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mb-16"></div>
 
       {/* GRID */}
       <section className="px-6 md:px-20 pb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
-          {newsData.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="flex flex-col h-full bg-slate-900/70 border border-slate-700 rounded-2xl overflow-hidden shadow-md hover:shadow-amber-400/20 hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm"
-                          >
-              <img src={item.img} alt={item.title} className="w-full h-64 object-cover" />
+          {newsData
+            .sort((a, b) => Number(b.id) - Number(a.id))
+            .map((item, index) => (
+              <motion.div
+  key={item.id}
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: index * 0.05 }}
+  viewport={{ once: true }}
+  className="flex flex-col bg-slate-900/70 border border-slate-700 rounded-2xl overflow-hidden shadow-md hover:shadow-amber-400/20 hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm"
+>
+  {/* IMAGE */}
+  <div className="relative w-full aspect-square overflow-hidden">
+    <img
+      src={item.img}
+      alt={item.title}
+      className="absolute inset-0 w-full h-full object-cover object-center"
+    />
+  </div>
 
-              <div className="p-6 flex flex-col h-full">
-                <p className="text-sm text-amber-300 tracking-wide mb-2">{item.date}</p>
+  {/* CONTENT */}
+  <div className="p-6 flex flex-col flex-grow">
+    <p className="text-sm text-amber-300 tracking-wide mb-2">
+      {item.date}
+    </p>
 
-                <h3 className="text-xl font-semibold text-gray-100 mb-3 leading-snug">
-                  {item.title}
-                </h3>
+    <h3 className="text-xl font-semibold text-gray-100 mb-3 leading-snug">
+      {item.title}
+    </h3>
 
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  {item.excerpt}
-                </p>
+    <p className="text-gray-400 text-sm leading-relaxed mb-4">
+      {item.excerpt}
+    </p>
 
-                <button
-                  className="mt-auto w-fit px-4 py-2 bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-medium rounded-lg transition"
-                  onClick={() => setSelected(item)}
-                >
-                  Leer más
-                </button>
-              </div>
-            </motion.div>
-          ))}
+    {/* BUTTON AT BOTTOM */}
+    <button
+      className="mt-auto w-fit px-4 py-2 bg-amber-500/80 hover:bg-amber-500 text-slate-900 font-medium rounded-lg transition"
+      onClick={() => setSelected(item)}
+    >
+      Leer más
+    </button>
+  </div>
+</motion.div>
+            ))}
         </div>
       </section>
 

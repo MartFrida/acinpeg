@@ -3,6 +3,7 @@ import { useState } from "react";
 import colaboradores from "../data/profesorado_colaboradores.json";
 import apoyanos from "../data/apoyan.json";
 import graduacion from "../data/graduacion20251004.json";
+import equipo from "../data/equipo.json";
 import logos from "../data/partnners_logos.json";
 import noslogos from "../data/partnners_nos_logos.json";
 import SectionTitle from "../components/SectionTitle";
@@ -29,6 +30,7 @@ const AboutPage = () => {
   const guests: Guest[] = colaboradores;
   const apoyan: Guest[] = apoyanos;
   const grad: Graduacion[] = graduacion;
+  const nosequipo: Guest[] = equipo;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-gray-200 font-sans leading-relaxed">
@@ -211,9 +213,7 @@ const AboutPage = () => {
               index={index}
               imgSrc={guest.img}
               title={guest.name}
-            >
-
-            </AnimatedCard>
+            ></AnimatedCard>
           ))}
         </div>
       </section>
@@ -221,60 +221,32 @@ const AboutPage = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-16"></div>
       {/* Coordinación y equipo de coordinación */}
       <section className="py-10 lg:py-20 px-2 md:px-10 ">
-        <h2 className="text-2xl md:text-4xl font-semibold text-center text-amber-400 mb-10 uppercase tracking-wider font-serif drop-shadow-[0_0_10px_rgba(255,191,0,0.3)]">
-          Coordinación y equipo de coordinación
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 lg:gap-10 max-w-6xl mx-auto ">
-          {[
-            {
-              name: "Lic. Jimena Rosero Morales",
-              role: "Coordinadora general. Experta directora en eventos de belleza, moda y gestión cultural y empresaria y presidenta de la Aso Círculo de Comunicación  y medios en Europa.",
-              img: "/images/equipo/juimena.jpg",
-            },
-            {
-              name: "Lic. Karina Fuentes",
-              role: "CEO. Experta en administración empresarial",
-              img: "/images/equipo/karina_fuentes.png",
-            },
-            {
-              name: "Lic. Eric Maldonado",
-              role: "Experto en marketing, publicidad y relaciones internacionales",
-              img: "/images/equipo/eric_maldonado.png",
-            },
-          ].map((guest, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-200 rounded-2xl shadow-md overflow-hidden hover:shadow-slate-400/20 transition-all duration-300"
-            >
-              <img
-                src={guest.img}
-                alt={guest.name}
-                className="w-full h-48 lg:h-64 object-cover"
-              />
-              <div className="p-2 lg:p-6 text-center">
-                <h3 className="text-xl font-semibold text-slate-200">
-                  {guest.name}
-                </h3>
-                <p className="text-gray-400 italic mt-2">{guest.role}</p>
-              </div>
-            </motion.div>
+        <SectionTitle>Coordinación y equipo de coordinación</SectionTitle>
+        {/* Cards */}
+        <CardGrid>
+          {nosequipo.map((guest, i) => (
+            <AnimatedCard
+              key={i}
+              index={i}
+              imgSrc={guest.img}
+              title={guest.name}
+              role={guest.role}
+            ></AnimatedCard>
           ))}
-        </div>
+        </CardGrid>
       </section>
       <Divider />
       {/* Medios de Comunicación Nacional e Internacional */}
       <section className="py-10 px-4">
-        <SectionTitle className="text-white">Medios que dirigimos, coordinamos y colaboramos</SectionTitle>
+        <SectionTitle className="text-white">
+          Medios que dirigimos, coordinamos y colaboramos
+        </SectionTitle>
         <LogoGrid items={noslogos} size="h-20" />
       </section>
-
       <Divider />
       {/*  El director con persolidades relevantes */}
       <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-850 via-slate-950 to-slate-850 text-gray-200 px-2 md:px-10 shadow-xl/20">
-        <SectionTitle >El director con persolidades relevantes</SectionTitle>
+        <SectionTitle>El director con persolidades relevantes</SectionTitle>
         <div className="grid grid-cols-1  gap-8 max-w-6xl mx-auto">
           {[
             {
@@ -305,7 +277,7 @@ const AboutPage = () => {
       <Divider />
       {/* Graduacion, Promocion 2025 */}
       <section className="py-10 lg:py-20 bg-gradient-to-b from-slate-900 via-slate-700 to-slate-900 text-gray-200 px-2 md:px-10">
-        <SectionTitle > Graduacion, Promocion 2025</SectionTitle>
+        <SectionTitle> Graduacion, Promocion 2025</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 max-w-5xl mx-auto">
           {grad.map((alumnos, index) => (
             <motion.div
@@ -327,7 +299,9 @@ const AboutPage = () => {
       <Divider />
       {/* NUESTROS PARTNERS LOGOS */}
       <section className="py-10 lg:py-20 bg-white/5 rounded-xl hover:bg-white/10 transition px-2 md:px-10 ">
-        <SectionTitle className="text-white">Nuestros Colaboradores y Patrocinadores</SectionTitle>
+        <SectionTitle className="text-white">
+          Nuestros Colaboradores y Patrocinadores
+        </SectionTitle>
 
         <div className="grid grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 items-center justify-items-center max-w-6xl mx-auto  ">
           {logos.map((logo, index) => (

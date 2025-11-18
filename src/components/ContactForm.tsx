@@ -30,6 +30,10 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
+  const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
   const [form, setForm] = useState<FormData>({
     name: "",
     email: "",
@@ -39,6 +43,7 @@ export default function ContactForm() {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
+  const [open, setOpen] = useState(false);
 
   const validate = () => {
     const newErrors: FormErrors = {};
@@ -67,36 +72,43 @@ export default function ContactForm() {
       return;
     }
 
-    emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form, "YOUR_PUBLIC_KEY")
-      .then(
-        () => {
-          toast.success("Mensaje enviado correctamente!");
-          setForm({ name: "", email: "", phone: "", course: "", message: "" });
-        },
-        () => {
-          toast.error("Error al enviar. Intenta nuevamente.");
-        }
-      );
+    emailjs.send(serviceId, templateID, form, publicKey).then(
+      () => {
+        toast.success("Mensaje enviado correctamente!");
+        setForm({ name: "", email: "", phone: "", course: "", message: "" });
+      },
+      () => {
+        toast.error("Error al enviar. Intenta nuevamente.");
+      }
+    );
   };
 
   return (
-    <div className="w-full  mt-10 pb-24">
-      <Toaster />
+    <div className="w-full mt-10 pb-10 ">
+      <Toaster
+        containerStyle={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          zIndex: 9999,
+        }}
+      />
+
       <Divider />
 
-      <section className="max-w-5xl mx-auto mt-16">
+      <section className="max-w-5xl mx-auto mt-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-slate-800/70 border border-amber-400/40 rounded-2xl p-10 shadow-xl backdrop-blur-lg w-full"
+          className="bg-slate-800/70 border border-amber-400/40 rounded-2xl p-6 mb:p-10 shadow-xl backdrop-blur-lg w-full"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-amber-400 mb-6 drop-shadow">
+          <h2 className="text-2xl md:text-4xl font-bold text-center text-amber-400 mb-4 md:mb-6 drop-shadow">
             Inscripción / Contacto
           </h2>
-          <p className="text-gray-300 text-center mb-10 text-lg">
+          <p className="text-gray-300 text-center mb-6 md:mb-10 text-md">
             Completa el formulario y nos comunicaremos contigo lo antes posible.
           </p>
 
@@ -150,33 +162,50 @@ export default function ContactForm() {
             </div>
 
             {/* COURSE SELECT */}
-            <div>
-  <label className="text-gray-300 block mb-2 font-medium">
-    Curso que te interesa
-  </label>
-  <div className="relative">
-    <select
-      value={form.course}
-      onChange={(e) => setForm({ ...form, course: e.target.value })}
-      className="w-full p-3 pr-10 rounded-lg bg-slate-900/40 border border-slate-700 focus:border-amber-400 focus:ring-2 focus:ring-amber-400/30 transition text-gray-200 appearance-none"
-    >
-      <option value="">Selecciona un curso</option>
-      {courses.map((c: Course) => (
-        <option key={c.id} value={c.title}>
-          {c.title}
-        </option>
-      ))}
-    </select>
+            <div className="relative w-full">
+              <label className="text-gray-300 block mb-2 font-medium">
+                Curso que te interesa
+              </label>
+              <button
+                type="button"
+                className="w-full p-3 rounded-lg bg-slate-900/40 border border-slate-700 text-gray-200/50 flex justify-between items-center"
+                onClick={() => setOpen(!open)}
+              >
+                {form.course || "Selecciona un curso"}
+                <svg
+                  className={`w-4 h-4 transition-transform ${
+                    open ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
 
-    {/* Опционально можно добавить свою стрелку */}
-    <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-300">
-      ▼
-    </div>
-  </div>
-  {errors.course && (
-    <p className="text-red-400 text-sm mt-1">{errors.course}</p>
-  )}
-</div>
+              {open && (
+                <ul className="absolute mt-1 w-full bg-slate-900 border border-slate-700 rounded-lg shadow-lg z-50 max-h-60 overflow-auto">
+                  {courses.map((c: Course) => (
+                    <li
+                      key={c.id}
+                      onClick={() => {
+                        setForm({ ...form, course: c.title });
+                        setOpen(false);
+                      }}
+                      className="p-3 cursor-pointer hover:bg-slate-800 transition text-gray-200"
+                    >
+                      {c.title}
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
             {/* MESSAGE */}
             <div>

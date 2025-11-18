@@ -8,6 +8,7 @@ interface AnimatedCardProps {
   title: string;
   index?: number;
   className?: string;
+  role?:string;
   children?: React.ReactNode; // например кнопки
 }
 
@@ -15,6 +16,7 @@ const AnimatedCard = ({
   imgSrc,
   title,
   className = "",
+  role,
   children,
 }: AnimatedCardProps) => (
   <motion.div
@@ -30,7 +32,7 @@ const AnimatedCard = ({
 
     <div className="p-6 text-center">
       <h3 className="text-xl">{title}</h3>
-
+<p className="text-gray-400 italic mt-2">{role}</p>
       {children}
     </div>
   </motion.div>

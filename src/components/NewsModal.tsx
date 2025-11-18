@@ -14,7 +14,6 @@ interface Props {
 }
 
 export default function NewsModal({ selected, onClose }: Props) {
-  
   // === Блокировка прокрутки фона ===
   useEffect(() => {
     if (selected) {
@@ -71,19 +70,12 @@ export default function NewsModal({ selected, onClose }: Props) {
                 {selected.title}
               </h2>
 
-              <p className="text-gray-300 leading-relaxed whitespace-pre-line mb-4">
-                {selected.content || selected.excerpt}
-              </p>
-
               {selected.description && (
                 <p className="text-gray-400 leading-relaxed whitespace-pre-line m-6">
                   {selected.description}
                 </p>
               )}
-
-              
             </div>
-
           </motion.div>
         </motion.div>
       )}
