@@ -1,14 +1,60 @@
-# React + TypeScript + Vite
+# ACINPECG — International Academy of Global Journalism & Communication
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📘 About the Project
 
-Currently, two official plugins are available:
+ACINPECG is the official website for the Academia Internacional de Periodismo-Comunicación Global — an international institution focused on journalism, communication, and global media.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project delivers a modern, responsive, and performance-optimized website built using the latest technologies such as React 19, Vite, TailwindCSS 4, Redux Toolkit, and framer-motion. It also supports dynamic forms using EmailJS.
 
-## Steps
+🌐 Official Website: https://acinpecg.com/
 
-1. React, TypeScript, Tailwind CSS
-2. Create Structura with pages/components
-3. Routes in App
+📦 GitHub Repository: https://github.com/MartFrida/acinpeg
+
+##🧩 Tech Stack
+Frontend & UI
+
+React 19
+
+Vite 6
+
+TailwindCSS 4
+
+Framer Motion
+
+Lucide-React & React Icons
+
+State & Routing
+
+Redux Toolkit
+
+React Router DOM 7
+
+Forms & UX
+
+EmailJS
+
+React Hot Toast
+
+Developer Tools
+
+TypeScript
+
+ESLint with TypeScript ESLint
+
+Vite React Plugin
+
+✨ Features
+
+Fully responsive design
+
+Smooth, modern animations
+
+Toast notifications
+
+Email form with EmailJS integration
+
+Clean, modular structure
+
+Fast loading times (Vite + React 19)
+
+TailwindCSS 4 with custom configuration
