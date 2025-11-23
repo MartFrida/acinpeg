@@ -1,5 +1,5 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../assets/logo1_con50_bg.png";
+import logo from "../assets/logo1_con50_bg.webp";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {

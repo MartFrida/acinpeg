@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logobg.png";
+import logo from "../assets/logobg.webp";
 import { HiMenu, HiX } from "react-icons/hi"; // icons
 
 const Header = () => {

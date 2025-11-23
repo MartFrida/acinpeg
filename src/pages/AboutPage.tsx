@@ -252,7 +252,7 @@ const AboutPage = () => {
             {
               name: "Jaume Collboni Alcalde de la Cuidad de Barcelona",
               role: "El director con persolidades relevantes aquí con Jaume Collboni Alcalde de la Cuidad de Barcelona",
-              img: "/images/PersolidadesRelevantes.jpg",
+              img: "/images/PersolidadesRelevantes.webp",
             },
           ].map((guest, index) => (
             <motion.div

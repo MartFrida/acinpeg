@@ -1,14 +1,14 @@
 [
-{"src":"/images/diploma1.jpg",
+{"src":"/images/diploma1.webp",
             "alt":"Entrega de diplomas 1"},
-{   "src":"/images/diploma2.jpg",
+{   "src":"/images/diploma2.webp",
             "alt":"Entrega de diplomas 2"},
-{ "src":"/images/diploma3.jpg",
+{ "src":"/images/diploma3.webp",
             "alt":"Entrega de diplomas 1"},
-{"src":"/images/guest3.jpg",
+{"src":"/images/guest3.webp",
             "alt":"Entrega de diplomas 2"},
-{"src":"/images/diploma5.jpg",
+{"src":"/images/diploma5.webp",
             "alt":"Entrega de diplomas 3"},
-{ "src":"/images/diploma6.jpg",
+{ "src":"/images/diploma6.webp",
             "alt":"Entrega de diplomas 3"}        
 ]

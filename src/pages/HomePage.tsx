@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
-import bgCover from "../assets/hero1.png";
+import bgCover from "../assets/hero1.webp";
 
 const HomePage = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
