@@ -8,9 +8,25 @@ import CourseDetails from './pages/CourseDetailsPage';
 import CoursosPage from './pages/CoursosPage';
 import NoticiasPage from './pages/NoticiasPage';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import { useEffect, useState } from 'react';
 
 function App() {
+const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Симуляция загрузки данных/ассетов
+    const timer = setTimeout(() => setLoading(false), 1200); 
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="preloader">
+        <div className="preloader-spinner"></div>
+        <div className="preloader-title">ACINPEG</div>
+      </div>
+    );
+  }
   return (
     <div className='flex flex-col justify-between min-h-screen'>
       <Header />
