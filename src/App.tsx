@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import Contacts from "./pages/Contacts";
 import AboutPage from "./pages/AboutPage";
@@ -10,8 +10,14 @@ import NoticiasPage from "./pages/NoticiasPage";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useEffect, useState } from "react";
 import Logo from "./assets/logo.svg";
+import StudentDashboard from "./pages/StudentDashboard";
+import { useAuthStore } from "./stores/auth";
+import LoginPage from "./pages/LoginPage";
+import EditorPage from "./pages/EditorPage";
+import InstructorDashboard from "./pages/InstructorDashboard";
 
 function App() {
+  const { user } = useAuthStore();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -38,6 +44,12 @@ function App() {
         <Route path="/coursos/:id" element={<CourseDetails />} />
         <Route path="/noticias" element={<NoticiasPage />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/alumno" element={<StudentDashboard />} />
+        <Route path="/profesor" element={<InstructorDashboard />} />
+        <Route path="editor/:id" element={<EditorPage/>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route index element={<Navigate to={user?.role === 'profesor' ? '/profesor' : '/student'} />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <ScrollToTopButton />
       <Footer />
