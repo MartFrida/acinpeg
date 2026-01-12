@@ -1,5 +1,15 @@
 [
+  {
+      "name": "Lcda. Erika Sanchez (Venezuela)",
+      "role": "Licenciada en Comunicación por la Universidad Complutence de Madrid.",
+      "img": "/images/colaboradores/Erika_Sanchez.webp"
+    },
     {
+      "name": "Lcdo. Rafa Plaza (España)",
+      "role": "Es periodista y corresponsal guerrera internacional. Catedrático reconocido a nivel mundial.",
+      "img": "/images/colaboradores/Rafa_Plaza.webp"
+    },  
+  {
       "name": "Dr. Paco Miño (Ecuador)",
       "role": "Médico cirujano oriundo del Ecuador, escritor, poeta, comunicador y un gestor cultural latinoamericano.",
       "img": "/images/colaboradores/DrPacoMiño.webp"

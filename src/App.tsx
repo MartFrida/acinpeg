@@ -11,13 +11,13 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import { useEffect, useState } from "react";
 import Logo from "./assets/logo.svg";
 import StudentDashboard from "./pages/StudentDashboard";
-import { useAuthStore } from "./stores/auth";
+// import { useAuthStore } from "./stores/auth";
 import LoginPage from "./pages/LoginPage";
 import EditorPage from "./pages/EditorPage";
 import InstructorDashboard from "./pages/InstructorDashboard";
 
 function App() {
-  const { user } = useAuthStore();
+  // const { user } = useAuthStore();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
         <Route path="/profesor" element={<InstructorDashboard />} />
         <Route path="editor/:id" element={<EditorPage/>} />
         <Route path="/login" element={<LoginPage />} />
-        <Route index element={<Navigate to={user?.role === 'profesor' ? '/profesor' : '/student'} />} />
+        {/* <Route index element={<Navigate to={user?.role === 'profesor' ? '/profesor' : '/student'} />} /> */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
       <ScrollToTopButton />
